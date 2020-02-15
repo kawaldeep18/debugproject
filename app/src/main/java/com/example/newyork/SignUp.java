@@ -6,20 +6,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-public class Main4Activity extends AppCompatActivity {
-private Button press2;
+public class SignUp extends AppCompatActivity {
+    private Button signup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
-         Button press2 = findViewById(R.id.back);
-
-        press2.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_sign_up);
+        Button signup= findViewById(R.id.b_signup_button);
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent4 = new Intent(Main4Activity.this, Main3Activity.class);
-                startActivity(intent4);
+                Intent intent = new Intent(SignUp.this,MainActivity.class);
+                startActivity(intent);
+
             }
         });
     }

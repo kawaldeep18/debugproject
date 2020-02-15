@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText edt_logemail=findViewById(R.id.edt_logemail);
         final EditText edt_logpassword=findViewById(R.id.edt_logpassword1);
         final Button logu=findViewById(R.id.logu);
+        final Button signup = findViewById(R.id.b_signup);
         final Intent intent1 =new Intent(this,Main2Activity.class);
         //button
         logu.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +36,13 @@ if (!edt_logemail.getText().toString().equals("admin")){
     }
     }
 }
-            })
-        ;
+            });
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent = new Intent(MainActivity.this,SignUp.class);
+               startActivity(intent);
+            }
+        });
     }
 }
