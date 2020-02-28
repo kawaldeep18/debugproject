@@ -13,9 +13,9 @@ private Button next;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-         Button next=findViewById(R.id.press);
+         Button press1=findViewById(R.id.press1);
 
-       next.setOnClickListener(new View.OnClickListener() {
+       press1.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Intent intent2=new Intent(Main2Activity.this,Main3Activity.class);
