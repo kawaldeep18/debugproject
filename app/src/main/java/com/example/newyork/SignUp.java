@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
     private Button signup;
@@ -18,7 +17,7 @@ public class SignUp extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignUp.this,MainActivity.class);
+                Intent intent = new Intent(SignUp.this, LoginActivity.class);
                 startActivity(intent);
 
             }

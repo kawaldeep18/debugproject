@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText edt_logpassword=findViewById(R.id.edt_logpassword1);
         final Button logu=findViewById(R.id.logu);
         final Button signup = findViewById(R.id.b_signup);
-        final Intent intent1 =new Intent(this,Main2Activity.class);
+        final Intent intent1 =new Intent(this,HomeActivity.class);
         //button
         logu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +40,7 @@ if (!edt_logemail.getText().toString().equals("admin")){
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent intent = new Intent(MainActivity.this,SignUp.class);
+               Intent intent = new Intent(LoginActivity.this,SignUp.class);
                startActivity(intent);
             }
         });
