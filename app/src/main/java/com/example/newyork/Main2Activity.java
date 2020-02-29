@@ -1,6 +1,8 @@
 package com.example.newyork;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,15 +15,9 @@ private Button next;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-         Button press1=findViewById(R.id.press1);
-
-       press1.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent2=new Intent(Main2Activity.this,Main3Activity.class);
-        startActivity(intent2);
-    }
-});
-
+        RecyclerView bookslist=findViewById(R.id.bookslist);
+        bookslist.setLayoutManager(new LinearLayoutManager(this));
+        String[] books ={"The Glass Hotel","Long Bright River","The Authenticity Project"};
+bookslist.setAdapter(new Booksadapter(books));
     }
 }
