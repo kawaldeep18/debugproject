@@ -18,6 +18,6 @@ private Button next;
         RecyclerView bookslist=findViewById(R.id.bookslist);
         bookslist.setLayoutManager(new LinearLayoutManager(this));
         String[] books ={"The Glass Hotel","Long Bright River","The Authenticity Project"};
-        //bookslist.setAdapter(new Booksadapter(books));
+        //bookslist.setAdapter(new com.example.newyork.Booksadapter(books));
     }
 }
